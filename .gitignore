@@ -1,0 +1,103 @@
+# =============== #
+# Unity generated #
+# =============== #
+
+/SimpleForklift/[Ll]ibrary/
+/SimpleForklift/[Tt]emp/
+/SimpleForklift/[Oo]bj/
+/SimpleForklift/[Bb]uild/
+/SimpleForklift/[Bb]uilds/
+/SimpleForklift/[Ll]ogs/
+/SimpleForklift/Assets/AssetStoreTools*
+/SimpleForklift/UnityPackageManager
+/SimpleForklift/Assets/_Plugins/RainbowAssets/
+/SimpleForklift/Assets/_Plugins/RainbowAssets.meta
+/SimpleForklift/[Uu]ser[Ss]ettings/
+
+/[Bb]uild/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+/SimpleForklift/.consulo/
+/SimpleForklift/.vs/
+/SimpleForklift/ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.vscode
+*.vsconfig
+
+# ====================== #
+# Gradle cache directory #
+# ====================== #
+/SimpleForklift/.gradle/
+
+# ============================= #
+# Unity3D generated meta files  #
+# ============================= #
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# ======================================== #
+# Unity3D generated file on crash reports  #
+# ======================================== #
+sysinfo.txt
+*.stackdump
+
+# ======================================== #
+# Crashlytics generated file               #
+# ======================================== #
+crashlytics-build.properties
+
+# ==================== #
+# Builds               #
+# ==================== #
+*.apk
+#*.unitypackage
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# =============== #
+#      Other      #
+# =============== #
+*.blend1
+*.orig
+*.orig.meta
+*.blend1.meta
+
+# =============== #
+#    Whiteboard   #
+# =============== #
+SimpleForklift.rar
+SimpleForklift.7z
+
+
+# =============== #
+#       Rider	  #
+# =============== #
+/SimpleForklift/.idea/
+SimpleForklift/UserSettings/AndroidLogcatSettings.asset
+
