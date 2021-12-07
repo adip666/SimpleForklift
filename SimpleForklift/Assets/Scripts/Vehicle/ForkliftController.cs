@@ -1,10 +1,11 @@
-using InputSystem;
 using UnityEngine;
 
 namespace Forklift
 {
     public class ForkliftController : MonoBehaviour
     {
+        [SerializeField] private InputSystem.InputSystem inputSystem;
+        
         [SerializeField] private WheelCollider frontRightWheelCollider;
         [SerializeField] private WheelCollider frontLeftWheelCollider;
         [SerializeField] private WheelCollider backRightWheelCollider;
@@ -15,24 +16,26 @@ namespace Forklift
         [SerializeField] private Transform backRightWheelTransform;
         [SerializeField] private Transform backLeftWheelTransform;
 
+        [SerializeField] private Transform handler;
+        [SerializeField] private Transform handlerMaxTransform;
+        [SerializeField] private Transform handlerMinTransform;
+        
+
         [SerializeField] private float maxSteerAngle = 30f;
         [SerializeField] private float engineForce = 30f;
         [SerializeField] private float brakeForce = 200f;
-
-        [SerializeField] private InputSystem.InputSystem inputSystem;
-
-
+        [SerializeField] private float handlerSpeed = 1;
+        
         private float steeringAngle;
-
-
+        
         private void FixedUpdate()
         {
             Steering();
             Accelerate();
             UpdateWheels();
+            HandlerControl();
         }
-
-
+        
         private void Steering()
         {
             steeringAngle = maxSteerAngle * inputSystem.HorizontalAxis;
@@ -72,6 +75,26 @@ namespace Forklift
             wheelCollider.GetWorldPose(out wheelPosition, out wheelRotation);
             wheelTransform.position = wheelPosition;
             wheelTransform.rotation = wheelRotation;
+        }
+
+        private void HandlerControl()
+        {
+            if (inputSystem.HandlerUpButton && handler.position.y < handlerMaxTransform.position.y)
+            {
+                handler.transform.Translate(Vector3.up * Time.deltaTime * handlerSpeed);
+            }
+            else if (handler.position.y > handlerMaxTransform.position.y)
+            {
+                handler.transform.position = handlerMaxTransform.position;
+            }
+            else if (inputSystem.HandlerDownButton && handler.position.y > handlerMinTransform.position.y)
+            {
+                handler.transform.Translate(-Vector3.up * Time.deltaTime * handlerSpeed);
+            }
+            else if (handler.position.y < handlerMinTransform.position.y)
+            {
+                handler.transform.position = handlerMinTransform.position;
+            }
         }
     }
 }
