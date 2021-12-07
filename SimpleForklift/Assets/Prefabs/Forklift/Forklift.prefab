@@ -1062,8 +1062,9 @@ MonoBehaviour:
   backRightWheelTransform: {fileID: 4132295776810784906}
   backLeftWheelTransform: {fileID: 2209761598489054862}
   maxSteerAngle: 30
-  motorForce: 350
+  engineForce: 300
   brakeForce: 200
+  inputSystem: {fileID: 0}
 --- !u!1 &8432286827798275138
 GameObject:
   m_ObjectHideFlags: 0
